@@ -3,7 +3,7 @@ const replaceElements = (arr:number[]):number[] => {
     for (let i = arr.length - 1; i >= 0; i--) {
         let temp = arr[i];
         arr[i] = max;
-        temp > max ? max = temp : null;
+        max = Math.max(max, temp);
     }
 
     return arr;
